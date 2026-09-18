@@ -1,0 +1,9 @@
+{
+  "sites": {
+    "edsstardustreplicademo": {
+      "previewOrg": "yourcd",
+      "previewSite": "edsstardustreplicademo",
+      "contentHostUrl": "https://content.da.live/yourcd/edsstardustreplicademo/"
+    }
+  }
+}

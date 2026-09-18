@@ -1,0 +1,534 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-09-17T05:49:39.644Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "blogs",
+  "url": "https://indiauncharted.com/blogs/",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-09-17T05:49:39.644Z",
+  "finalUrl": "https://indiauncharted.com/blogs/",
+  "title": "Blogs - India Uncharted",
+  "description": null,
+  "og": {
+    "title": "Blogs - India Uncharted",
+    "description": null,
+    "image": null,
+    "type": "article"
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Blogs"
+    },
+    {
+      "tag": "h2",
+      "text": "Our Blogs"
+    },
+    {
+      "tag": "h2",
+      "text": "5 Best Ayurvedic & Wellness Retreat Centres in Goa: A Complete Guide for Mind, Body & Soul"
+    },
+    {
+      "tag": "h2",
+      "text": "Luxury Yoga Retreats in Goa – A Complete Wellness Travel Guide 2026"
+    },
+    {
+      "tag": "h2",
+      "text": "10 Fascinating Facts About Goa: India’s Tropical Paradise"
+    },
+    {
+      "tag": "h2",
+      "text": "Yoga Holiday in India: Find Peace, Wellness, and Transformation in Goa"
+    },
+    {
+      "tag": "h2",
+      "text": "Best Time to Visit Goa for a Yoga Retreat: A Complete Seasonal Guide"
+    },
+    {
+      "tag": "h2",
+      "text": "Why Goa Is One of the Best Places in India for a Yoga Retreat"
+    },
+    {
+      "tag": "h2",
+      "text": "Why a Yoga Holiday in Goa Is the Perfect Wellness Escape"
+    },
+    {
+      "tag": "h2",
+      "text": "Top 5 Opulent Hotels in Jodhpur for a Regal Stay"
+    },
+    {
+      "tag": "h2",
+      "text": "The Ultimate Guide to Golden Triangle India Tours Explore the Best of India in Style"
+    },
+    {
+      "tag": "h2",
+      "text": "200-Hour Yoga Teacher Training in Goa: The Ultimate Guide to Becoming a Certified Yoga Teacher"
+    },
+    {
+      "tag": "h4",
+      "text": "Get In Touch"
+    },
+    {
+      "tag": "h4",
+      "text": "Quick Links"
+    },
+    {
+      "tag": "h4",
+      "text": "Location"
+    }
+  ],
+  "body": [
+    "Home",
+    "About Us",
+    "Destinations",
+    "Activity",
+    "Transfers",
+    "Blogs",
+    "Contact Us",
+    "At India Uncharted, our mission is to showcase the true essence of India by designing meaningful, personalized, and seamless travel experiences. We strive to connect travelers with the rich heritage of India—from the royal grandeur of Rajasthan.",
+    "Killi khana , Sodagoran ka Mohalla Jodhpur Rajasthan India 342001",
+    "+91 - 8005967178",
+    "indiaunchartedtravel@gmail.com",
+    "About Us",
+    "Destination",
+    "Activity",
+    "Transfers",
+    "Blogs",
+    "Contact Us"
+  ],
+  "codeBlocks": [],
+  "ctas": [
+    {
+      "label": "Home",
+      "href": "https://indiauncharted.com/"
+    },
+    {
+      "label": "About Us",
+      "href": "https://indiauncharted.com/about-us/"
+    },
+    {
+      "label": "Destinations",
+      "href": "https://indiauncharted.com/destinations/"
+    },
+    {
+      "label": "Activity",
+      "href": "https://indiauncharted.com/activity/"
+    },
+    {
+      "label": "Transfers",
+      "href": "https://indiauncharted.com/transfers/"
+    },
+    {
+      "label": "Blogs",
+      "href": "https://indiauncharted.com/blogs/"
+    },
+    {
+      "label": "Contact Us",
+      "href": "https://indiauncharted.com/contact-us/"
+    },
+    {
+      "label": "+91-8005967178",
+      "href": "tel:+91-8005967178"
+    },
+    {
+      "label": "5 Best Ayurvedic & Wellness Retreat Centres in Goa: A Complete Guide for Mind, Body & Soul",
+      "href": "https://indiauncharted.com/best-ayurvedic-wellness-retreat-goa/"
+    },
+    {
+      "label": "0",
+      "href": "https://indiauncharted.com/best-ayurvedic-wellness-retreat-goa/#respond"
+    },
+    {
+      "label": "Read more",
+      "href": "https://indiauncharted.com/best-ayurvedic-wellness-retreat-goa/"
+    },
+    {
+      "label": "Luxury Yoga Retreats in Goa – A Complete Wellness Travel Guide 2026",
+      "href": "https://indiauncharted.com/luxury-yoga-retreats-goa/"
+    },
+    {
+      "label": "0",
+      "href": "https://indiauncharted.com/luxury-yoga-retreats-goa/#respond"
+    },
+    {
+      "label": "Read more",
+      "href": "https://indiauncharted.com/luxury-yoga-retreats-goa/"
+    },
+    {
+      "label": "10 Fascinating Facts About Goa: India’s Tropical Paradise",
+      "href": "https://indiauncharted.com/10-fascinating-facts-about-goa-indias-tropical-paradise/"
+    },
+    {
+      "label": "0",
+      "href": "https://indiauncharted.com/10-fascinating-facts-about-goa-indias-tropical-paradise/#respond"
+    },
+    {
+      "label": "Read more",
+      "href": "https://indiauncharted.com/10-fascinating-facts-about-goa-indias-tropical-paradise/"
+    },
+    {
+      "label": "Yoga Holiday in India: Find Peace, Wellness, and Transformation in Goa",
+      "href": "https://indiauncharted.com/yoga-holiday-india-goa/"
+    },
+    {
+      "label": "0",
+      "href": "https://indiauncharted.com/yoga-holiday-india-goa/#respond"
+    },
+    {
+      "label": "Read more",
+      "href": "https://indiauncharted.com/yoga-holiday-india-goa/"
+    },
+    {
+      "label": "Best Time to Visit Goa for a Yoga Retreat: A Complete Seasonal Guide",
+      "href": "https://indiauncharted.com/best-time-to-visit-goa-for-yoga-retreat/"
+    },
+    {
+      "label": "0",
+      "href": "https://indiauncharted.com/best-time-to-visit-goa-for-yoga-retreat/#respond"
+    },
+    {
+      "label": "Read more",
+      "href": "https://indiauncharted.com/best-time-to-visit-goa-for-yoga-retreat/"
+    },
+    {
+      "label": "Why Goa Is One of the Best Places in India for a Yoga Retreat",
+      "href": "https://indiauncharted.com/best-yoga-retreats-in-goa-2026/"
+    },
+    {
+      "label": "0",
+      "href": "https://indiauncharted.com/best-yoga-retreats-in-goa-2026/#respond"
+    },
+    {
+      "label": "Read more",
+      "href": "https://indiauncharted.com/best-yoga-retreats-in-goa-2026/"
+    },
+    {
+      "label": "Why a Yoga Holiday in Goa Is the Perfect Wellness Escape",
+      "href": "https://indiauncharted.com/yoga-holiday-in-goa/"
+    },
+    {
+      "label": "0",
+      "href": "https://indiauncharted.com/yoga-holiday-in-goa/#respond"
+    },
+    {
+      "label": "Read more",
+      "href": "https://indiauncharted.com/yoga-holiday-in-goa/"
+    },
+    {
+      "label": "Top 5 Opulent Hotels in Jodhpur for a Regal Stay",
+      "href": "https://indiauncharted.com/top-5-opulent-hotels-in-jodhpur-for-a-regal-stay/"
+    },
+    {
+      "label": "0",
+      "href": "https://indiauncharted.com/top-5-opulent-hotels-in-jodhpur-for-a-regal-stay/#respond"
+    },
+    {
+      "label": "Read more",
+      "href": "https://indiauncharted.com/top-5-opulent-hotels-in-jodhpur-for-a-regal-stay/"
+    },
+    {
+      "label": "The Ultimate Guide to Golden Triangle India Tours Explore the Best of India in Style",
+      "href": "https://indiauncharted.com/the-ultimate-guide-to-golden-triangle-india-tours-explore-the-best-of-india-in-style/"
+    },
+    {
+      "label": "0",
+      "href": "https://indiauncharted.com/the-ultimate-guide-to-golden-triangle-india-tours-explore-the-best-of-india-in-style/#respond"
+    },
+    {
+      "label": "Read more",
+      "href": "https://indiauncharted.com/the-ultimate-guide-to-golden-triangle-india-tours-explore-the-best-of-india-in-style/"
+    },
+    {
+      "label": "200-Hour Yoga Teacher Training in Goa: The Ultimate Guide to Becoming a Certified Yoga Teacher",
+      "href": "https://indiauncharted.com/200-hour-yoga-teacher-training-in-goa-guide/"
+    },
+    {
+      "label": "0",
+      "href": "https://indiauncharted.com/200-hour-yoga-teacher-training-in-goa-guide/#respond"
+    },
+    {
+      "label": "Read more",
+      "href": "https://indiauncharted.com/200-hour-yoga-teacher-training-in-goa-guide/"
+    },
+    {
+      "label": "+91 - 8005967178",
+      "href": "tel:\n+91 - 8005967178"
+    },
+    {
+      "label": "indiaunchartedtravel@gmail.com",
+      "href": "mailto:indiaunchartedtravel@gmail.com"
+    },
+    {
+      "label": "About Us",
+      "href": "https://indiauncharted.com/about-us/"
+    },
+    {
+      "label": "Destination",
+      "href": "https://indiauncharted.com/destinations/"
+    },
+    {
+      "label": "Activity",
+      "href": "https://indiauncharted.com/activity/"
+    },
+    {
+      "label": "Transfers",
+      "href": "https://indiauncharted.com/transfers/"
+    },
+    {
+      "label": "Blogs",
+      "href": "https://indiauncharted.com/blogs/"
+    },
+    {
+      "label": "Contact Us",
+      "href": "https://indiauncharted.com/contact-us/"
+    },
+    {
+      "label": "India Uncharted",
+      "href": "https://indiauncharted.com/"
+    },
+    {
+      "label": "+91-8005967178",
+      "href": "tel:+91-8005967178"
+    }
+  ],
+  "links": [
+    "https://indiauncharted.com/",
+    "https://indiauncharted.com/about-us/",
+    "https://indiauncharted.com/destinations/",
+    "https://indiauncharted.com/activity/",
+    "https://indiauncharted.com/transfers/",
+    "https://indiauncharted.com/blogs/",
+    "https://indiauncharted.com/contact-us/",
+    "https://indiauncharted.com/blogs/#",
+    "tel:+91-8005967178",
+    "https://indiauncharted.com/best-ayurvedic-wellness-retreat-goa/",
+    "https://indiauncharted.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-20-2026-07_26_11-PM-1-1024x683.png",
+    "https://indiauncharted.com/best-ayurvedic-wellness-retreat-goa/#respond",
+    "https://indiauncharted.com/luxury-yoga-retreats-goa/",
+    "https://indiauncharted.com/wp-content/uploads/2026/06/Untitled-design_20260623_235416_0000-1024x791.png",
+    "https://indiauncharted.com/luxury-yoga-retreats-goa/#respond",
+    "https://indiauncharted.com/10-fascinating-facts-about-goa-indias-tropical-paradise/",
+    "https://indiauncharted.com/10-fascinating-facts-about-goa-indias-tropical-paradise/#respond",
+    "https://indiauncharted.com/yoga-holiday-india-goa/",
+    "https://indiauncharted.com/yoga-holiday-india-goa/#respond",
+    "https://indiauncharted.com/best-time-to-visit-goa-for-yoga-retreat/",
+    "https://indiauncharted.com/wp-content/uploads/2026/06/cuwKgyS1FjYY4IcJ_G9BjJnjcu-oKGwKNGE-5Ci7QyfAZCc4ySO0ZzFRaUzwn1U7nRB4aKt4nGoFXaEGICOgSqi3VdrnNK7vY_8QvIUnViUiXfI0b5AkNb1ZldIQAocDFZdW7Y4u5F78v5ZhSfXxYKbu9g-oO5TTas0c-eGr5l8FY566amQc2FYanqIBN5c0.jpg",
+    "https://indiauncharted.com/best-time-to-visit-goa-for-yoga-retreat/#respond",
+    "https://indiauncharted.com/best-yoga-retreats-in-goa-2026/",
+    "https://indiauncharted.com/wp-content/uploads/2026/06/DSC05808-HDR-1024x683.jpg",
+    "https://indiauncharted.com/best-yoga-retreats-in-goa-2026/#respond",
+    "https://indiauncharted.com/yoga-holiday-in-goa/",
+    "https://indiauncharted.com/wp-content/uploads/2026/05/1-12.webp",
+    "https://indiauncharted.com/yoga-holiday-in-goa/#respond",
+    "https://indiauncharted.com/top-5-opulent-hotels-in-jodhpur-for-a-regal-stay/",
+    "https://indiauncharted.com/wp-content/uploads/2026/02/638950851627807945_temp.jpg",
+    "https://indiauncharted.com/top-5-opulent-hotels-in-jodhpur-for-a-regal-stay/#respond",
+    "https://indiauncharted.com/the-ultimate-guide-to-golden-triangle-india-tours-explore-the-best-of-india-in-style/",
+    "https://indiauncharted.com/wp-content/uploads/2026/02/638820323088139530_temp.jpg",
+    "https://indiauncharted.com/the-ultimate-guide-to-golden-triangle-india-tours-explore-the-best-of-india-in-style/#respond",
+    "https://indiauncharted.com/200-hour-yoga-teacher-training-in-goa-guide/",
+    "https://indiauncharted.com/wp-content/uploads/2026/02/g-1.jpg",
+    "https://indiauncharted.com/200-hour-yoga-teacher-training-in-goa-guide/#respond",
+    "tel:+91 - 8005967178",
+    "mailto:indiaunchartedtravel@gmail.com",
+    "https://www.facebook.com/IndiaUncharted47?mibextid=ZbWKwL",
+    "https://x.com/india_uncharted?t=Y0VpQHDe-xeHyq9eq_Nlmg&s=09",
+    "https://www.youtube.com/@indiaunchartedtravel?si=_a4KnOsG6eI7cDbA"
+  ],
+  "media": {
+    "imgs": [
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/02/ind-chr-copy.png",
+        "alt": "ind chr copy",
+        "w": 532,
+        "h": 181
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/02/ind-chr-copy.png",
+        "alt": "ind chr copy",
+        "w": 532,
+        "h": 181
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/02/ind-chr-copy.png",
+        "alt": "ind chr copy",
+        "w": 532,
+        "h": 181
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/02/ind-chr-copy.png",
+        "alt": "ind chr copy",
+        "w": 532,
+        "h": 181
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-20-2026-07_26_11-PM-1-960x750.png",
+        "alt": "People practicing yoga during sunrise at a beachside yoga retreat in Goa, India, surrounded by palm trees and ocean views.",
+        "w": 960,
+        "h": 750
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/06/Untitled-design_20260623_235416_0000-960x750.png",
+        "alt": "",
+        "w": 406,
+        "h": 317
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/06/Untitled-design_20260623_235416_0000-960x750.png",
+        "alt": "",
+        "w": 406,
+        "h": 317
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-20-2026-07_26_11-PM-1-960x750.png",
+        "alt": "People practicing yoga during sunrise at a beachside yoga retreat in Goa, India, surrounded by palm trees and ocean views.",
+        "w": 406,
+        "h": 317
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/06/cuwKgyS1FjYY4IcJ_G9BjJnjcu-oKGwKNGE-5Ci7QyfAZCc4ySO0ZzFRaUzwn1U7nRB4aKt4nGoFXaEGICOgSqi3VdrnNK7vY_8QvIUnViUiXfI0b5AkNb1ZldIQAocDFZdW7Y4u5F78v5ZhSfXxYKbu9g-oO5TTas0c-eGr5l8FY566amQc2FYanqIBN5c0.jpg",
+        "alt": "",
+        "w": 406,
+        "h": 270
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/06/DSC05808-HDR-960x750.jpg",
+        "alt": "",
+        "w": 406,
+        "h": 317
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/05/1-12.webp",
+        "alt": "",
+        "w": 406,
+        "h": 271
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/02/638950851627807945_temp.jpg",
+        "alt": "",
+        "w": 406,
+        "h": 270
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/02/638820323088139530_temp-768x509.jpg",
+        "alt": "",
+        "w": 406,
+        "h": 269
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/02/g-1.jpg",
+        "alt": "",
+        "w": 406,
+        "h": 269
+      },
+      {
+        "src": "https://indiauncharted.com/wp-content/uploads/2026/02/ind-chr-wht-copy.png",
+        "alt": "",
+        "w": 529,
+        "h": 180
+      }
+    ],
+    "allImgCount": 15,
+    "cssBackgrounds": [
+      "https://indiauncharted.com/wp-content/uploads/2026/02/sh1nw-copy.jpg.jpeg"
+    ],
+    "modals": [],
+    "videos": [],
+    "iframes": [
+      {
+        "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.4486802421056!2d73.01828771093798!3d26.297271636172084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418db76bb5d519%3A0x932a0b6c50428e7!2sKilli%20Khana%2C%20Sodagaran%20Mohalla%2C%20Jodhpur%2C%20Rajasthan%20342001!5e1!3m2!1sen!2sin!4v1771406081626!5m2!1sen!2sin",
+        "title": null
+      }
+    ]
+  },
+  "customProps": {
+    "--wp-block-synced-color": "#7a00df",
+    "--wp-block-synced-color--rgb": "122,0,223",
+    "--wp-bound-block-color": "#7a00df",
+    "--wp-editor-canvas-background": "#ddd",
+    "--wp-admin-theme-color": "#007cba",
+    "--wp-admin-theme-color--rgb": "0,124,186",
+    "--wp-admin-theme-color-darker-10": "#006ba1",
+    "--wp-admin-theme-color-darker-10--rgb": "0,107,160.5",
+    "--wp-admin-theme-color-darker-20": "#005a87",
+    "--wp-admin-theme-color-darker-20--rgb": "0,90,135",
+    "--wp-admin-border-width-focus": "2px",
+    "--wp--preset--font-size--normal": "16px",
+    "--wp--preset--font-size--huge": "42px",
+    "--wp--preset--aspect-ratio--square": "1",
+    "--wp--preset--aspect-ratio--4-3": "4/3",
+    "--wp--preset--aspect-ratio--3-4": "3/4",
+    "--wp--preset--aspect-ratio--3-2": "3/2",
+    "--wp--preset--aspect-ratio--2-3": "2/3",
+    "--wp--preset--aspect-ratio--16-9": "16/9",
+    "--wp--preset--aspect-ratio--9-16": "9/16",
+    "--wp--preset--color--black": "#000000",
+    "--wp--preset--color--cyan-bluish-gray": "#abb8c3",
+    "--wp--preset--color--white": "#ffffff",
+    "--wp--preset--color--pale-pink": "#f78da7",
+    "--wp--preset--color--vivid-red": "#cf2e2e",
+    "--wp--preset--color--luminous-vivid-orange": "#ff6900",
+    "--wp--preset--color--luminous-vivid-amber": "#fcb900",
+    "--wp--preset--color--light-green-cyan": "#7bdcb5",
+    "--wp--preset--color--vivid-green-cyan": "#00d084",
+    "--wp--preset--color--pale-cyan-blue": "#8ed1fc",
+    "--wp--preset--color--vivid-cyan-blue": "#0693e3",
+    "--wp--preset--color--vivid-purple": "#9b51e0",
+    "--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple": "linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%)",
+    "--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+    "--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange": "linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%)",
+    "--wp--preset--gradient--luminous-vivid-orange-to-vivid-red": "linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%)",
+    "--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+    "--wp--preset--gradient--cool-to-warm-spectrum": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)",
+    "--wp--preset--gradient--blush-light-purple": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+    "--wp--preset--gradient--blush-bordeaux": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+    "--wp--preset--gradient--luminous-dusk": "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)",
+    "--wp--preset--gradient--pale-ocean": "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)",
+    "--wp--preset--gradient--electric-grass": "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)",
+    "--wp--preset--gradient--midnight": "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)",
+    "--wp--preset--font-size--small": "13px",
+    "--wp--preset--font-size--medium": "20px",
+    "--wp--preset--font-size--large": "36px",
+    "--wp--preset--font-size--x-large": "42px",
+    "--wp--preset--spacing--20": "0.44rem",
+    "--wp--preset--spacing--30": "0.67rem",
+    "--wp--preset--spacing--40": "1rem",
+    "--wp--preset--spacing--50": "1.5rem",
+    "--wp--preset--spacing--60": "2.25rem",
+    "--wp--preset--spacing--70": "3.38rem",
+    "--wp--preset--spacing--80": "5.06rem",
+    "--wp--preset--shadow--natural": "6px 6px 9px rgba(0, 0, 0, 0.2)",
+    "--wp--preset--shadow--deep": "12px 12px 50px rgba(0, 0, 0, 0.4)",
+    "--wp--preset--shadow--sharp": "6px 6px 0px rgba(0, 0, 0, 0.2)",
+    "--wp--preset--shadow--outlined": "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0)",
+    "--wp--preset--shadow--crisp": "6px 6px 0px rgb(0, 0, 0)",
+    "--brown": "#8A7156",
+    "--coral": "#E3876E",
+    "--coral-dk": "#D0705A",
+    "--linen": "#E5E3DC",
+    "--white": "#FFFFFF",
+    "--brown-lt": "#B09A80",
+    "--brown-xlt": "#D4C4B0",
+    "--rule": "rgba(138,113,86,0.18)",
+    "--rule-md": "rgba(138,113,86,0.35)",
+    "--shadow": "0 2px 40px rgba(138,113,86,0.10)",
+    "--shadow-lg": "0 8px 60px rgba(138,113,86,0.15)",
+    "--ease": "cubic-bezier(0.25,0.46,0.45,0.94)",
+    "--ease-out": "cubic-bezier(0.16,1,0.3,1)"
+  },
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 15,
+    "mainTextLen": 10123,
+    "realImageCount": 15,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "screenshot": "assets/screenshots/blogs.png",
+  "renderedHtml": "pages/blogs.html"
+}

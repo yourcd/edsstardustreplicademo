@@ -1,0 +1,15 @@
+import { chromium } from 'playwright';
+const url=process.argv[2];const UA='Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1';
+const b=await chromium.launch();const p=await(await b.newContext({viewport:{width:360,height:800},deviceScaleFactor:1,userAgent:UA,isMobile:true})).newPage();
+await p.goto(url,{waitUntil:'domcontentloaded',timeout:60000});await p.waitForTimeout(2500);
+await p.evaluate(async()=>{for(let y=0;y<document.body.scrollHeight;y+=600){scrollTo(0,y);await new Promise(r=>setTimeout(r,30));}scrollTo(0,0);});
+const isLive=url.includes('indiauncharted');
+const res=await p.evaluate((isLive)=>{const out={};const g=(n,sel,props)=>{const el=document.querySelector(sel);if(!el){out[n]={M:1};return;}const cs=getComputedStyle(el);const r=el.getBoundingClientRect();const o={y:Math.round(r.y+scrollY),h:Math.round(r.height)};for(const pr of props||[])o[pr]=cs[pr];out[n]=o;};
+ g('banner',isLive?'#Subheader':'.art-banner',['minHeight','paddingTop','paddingBottom']);
+ g('h1',isLive?'#Subheader h1':'.iu-pagebanner__title',['fontSize','lineHeight']);
+ g('feat',isLive?'.single-photo-wrapper.image .image_frame':'.art-featured');
+ g('relCard',isLive?'.post-related':'.art-related__card',['marginBottom']);
+ g('relImg',isLive?'.post-related .image_frame':'.art-related__thumb');
+ g('relTitle',isLive?'.section-related-adjustment>h4':'.art-related__title');
+ return out;},isLive);
+console.log(isLive?'LIVE':'PROTO',JSON.stringify(res,null,1));await b.close();

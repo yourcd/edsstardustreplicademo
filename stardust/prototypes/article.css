@@ -1,0 +1,309 @@
+/* ============================================================
+   India Uncharted — ARTICLE archetype (blog post)
+   Body-only. Header/footer/floating chrome come from canon.css.
+   Scoped to #Content / .art-*. Values lifted from live computed styles.
+   ============================================================ */
+
+/* ---- Banner override -------------------------------------------------
+   Live BeTheme #Subheader is 534px tall (padding 236px top / 178px bottom)
+   — taller than canon's default .iu-pagebanner (min-height 449px). The fixed
+   80px header overlaps it. Page-local override to match live geometry. */
+.art-banner {
+  min-height: 534px;
+  padding-top: 236px;
+  padding-bottom: 178px;
+}
+.art-banner .iu-pagebanner__title {
+  max-width: 1296px;
+  line-height: 60px;
+}
+
+/* ---- Post container --------------------------------------------------
+   Live content column: wrapper max 1322px, inner content 1296px. */
+.art-post { background: var(--white); }
+.art-wrap {
+  max-width: 1322px;
+  margin: 0 auto;
+  padding: 0 13px;
+}
+.art-body,
+.art-author,
+.art-comments {
+  max-width: 1296px;
+}
+
+/* ---- Post header: prev/next nav + featured image --------------------- */
+.art-header { padding-top: 10px; }
+.art-nav {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  margin: 0 0 20px;
+  padding: 0;
+}
+.art-nav li { margin: 0; }
+.art-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 54px;
+  background: #f7f7f7;
+  color: #747474;
+  font-size: 22px;
+  line-height: 1;
+}
+.art-nav a:hover { color: var(--coral); }
+
+.art-featured {
+  margin: 0 0 40px;
+  padding-left: 90px; /* live centers the image in the space right of the floated ShareThis column */
+  text-align: center;
+}
+.art-featured img {
+  display: inline-block;
+  width: 636px;
+  height: 426px;
+  max-width: 100%;
+}
+
+/* ---- Article body prose ---------------------------------------------- */
+.art-body { padding-top: 0; padding-bottom: 0; }
+.art-body p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 32px;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 15px;
+}
+.art-body h2 {
+  font-family: var(--font-head);
+  font-size: 39px;
+  line-height: 54px;
+  font-weight: 500;
+  color: var(--brown);
+  margin: 0 0 15px;
+}
+.art-body ul {
+  margin: 0 0 15px 30px;
+  padding: 0;
+}
+.art-body li {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 32px;
+  font-weight: 400;
+  color: rgb(115, 126, 134);
+  margin: 0 0 10px;
+  list-style: disc;
+}
+.art-body a { color: var(--coral); }
+.art-body strong { font-weight: 700; }
+
+/* ---- Author box ------------------------------------------------------ */
+.art-author {
+  margin: 0 auto;
+  padding-bottom: 58px;
+  overflow: hidden;
+}
+.art-author__avatar {
+  float: left;
+  width: 64px;
+  margin-right: 40px;
+}
+.art-author__avatar img { width: 64px; height: 64px; }
+.art-author__desc {
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.02);
+  padding: 20px;
+}
+.art-author__desc h5 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #0a0a0a;
+  margin: 0;
+}
+.art-author__desc a { color: #0a0a0a; }
+.art-author__desc a:hover { color: var(--coral); }
+
+/* ---- Related posts (3-col) ------------------------------------------- */
+.art-related {
+  padding-top: 20px;
+  padding-bottom: 0;
+  margin-bottom: 32px;
+}
+.art-related__title {
+  font-family: var(--font-head);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--coral);
+  margin: 0 0 15px;
+}
+.art-related__grid {
+  display: flex;
+  gap: 26px;
+}
+.art-related__card {
+  flex: 1;
+  min-width: 0;
+}
+.art-related__thumb {
+  position: relative;
+  line-height: 0;
+}
+.art-related__thumb img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+.art-related__date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #f8f8f8;
+  color: #a8a8a8;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 2px 5px;
+}
+.art-related__caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 30px;
+  line-height: 1.15;
+  font-weight: 600;
+  color: #fff;
+}
+.art-related__desc { padding-top: 15px; }
+.art-related__desc h4 {
+  font-family: var(--font-head);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--coral);
+  margin: 0 0 15px;
+}
+.art-related__desc h4 a { color: var(--coral); }
+.art-related__hr {
+  border: 0;
+  height: 1px;
+  background: #e6ae48;
+  width: 166px;
+  margin: 0 0 15px;
+}
+.art-related__more {
+  display: inline-flex;
+  align-items: center;
+  height: 54px;
+  padding: 0 20px;
+  background: var(--coral);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+.art-related__more:hover { background: var(--coral-dk); }
+
+/* ---- Comments / reply form ------------------------------------------- */
+.art-comments {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.art-comments__title {
+  font-family: var(--font-head);
+  font-size: 21px;
+  line-height: 25px;
+  font-weight: 600;
+  color: var(--brown);
+  margin: 0 0 15px;
+}
+.art-comments__title small { font-size: 21px; }
+.art-form__notes {
+  font-size: 15px;
+  line-height: 32px;
+  margin: 0 0 15px;
+  color: var(--ink);
+}
+.req { color: var(--coral); }
+.art-form label {
+  display: block;
+  font-size: 15px;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+.art-form textarea,
+.art-form input[type="text"] {
+  width: 100%;
+  border: 1px solid var(--coral);
+  padding: 10px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.art-form textarea { height: 60px; resize: vertical; }
+.art-form input[type="text"] { height: 55px; }
+.art-form__row { margin: 0 0 15px; }
+.art-form__cols {
+  display: flex;
+  gap: 26px;
+}
+.art-form__cols .art-form__row { flex: 1; }
+.art-form__consent label { font-weight: 700; }
+.art-form__consent { margin: 0 0 15px; }
+.art-form__submit { margin: 0; }
+.art-form__submit input {
+  border: 0;
+  background: var(--coral);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 13.33px;
+  padding: 11px 20px;
+  cursor: pointer;
+}
+.art-form__submit input:hover { background: var(--coral-dk); }
+
+/* ---- Mobile (≤600): live header is a ~60px in-flow bar, not fixed 80px.
+   BeTheme scales type down (body 13/19, h2 23/32) and uses ~33px gutters. */
+@media (max-width: 600px) {
+  .iu-main { margin-top: 60px; }
+  .art-banner {
+    min-height: 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .art-banner .iu-pagebanner__title { font-size: 30px; line-height: 36px; }
+  .art-wrap { padding: 0 36px; }
+  .art-author { padding-bottom: 30px; }
+  .art-comments { padding-top: 30px; padding-bottom: 50px; }
+  .art-featured {
+    padding-left: 0;
+    padding-top: 112px; /* live stacks the ShareThis social column above the image on mobile */
+    margin-bottom: 38px;
+  }
+  .art-featured img { width: 100%; height: auto; }
+  .art-body p,
+  .art-body li,
+  .art-form__notes,
+  .art-form label { font-size: 13px; line-height: 19px; }
+  .art-body h2 { font-size: 23px; line-height: 32px; }
+  .art-related__grid { flex-direction: column; gap: 20px; }
+  .art-related__card { text-align: center; }
+  .art-related__thumb img { width: 264px; height: auto; }
+  .art-related__caption { font-size: 20px; }
+  .art-related__title { font-size: 19px; line-height: 19px; }
+  .art-related__desc { text-align: left; }
+  .art-related__desc h4 { font-size: 14px; line-height: 19px; }
+  .art-related__more { height: 41px; font-size: 13px; }
+  .art-form__cols { flex-direction: column; gap: 0; }
+}

@@ -1,0 +1,30 @@
+import { chromium } from 'playwright';
+const url='https://indiauncharted.com/yoga-holiday-in-goa/';
+const UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+const b=await chromium.launch();const ctx=await b.newContext({viewport:{width:1440,height:900},deviceScaleFactor:1,userAgent:UA});
+const p=await ctx.newPage();await p.goto(url,{waitUntil:'domcontentloaded',timeout:60000});await p.waitForTimeout(2500);
+await p.evaluate(async()=>{for(let y=0;y<document.body.scrollHeight;y+=800){scrollTo(0,y);await new Promise(r=>setTimeout(r,40));}scrollTo(0,0);});
+const res=await p.evaluate(()=>{
+  const out={};const grab=(n,sel,props)=>{const el=document.querySelector(sel);if(!el){out[n]={M:sel};return;}const cs=getComputedStyle(el);const r=el.getBoundingClientRect();const o={x:Math.round(r.x),y:Math.round(r.y+scrollY),w:Math.round(r.width),h:Math.round(r.height)};for(const pr of props)o[pr]=cs[pr];out[n]=o;};
+  grab('relImgFrame','.post-related .image_frame',['width','height']);
+  grab('relImg','.post-related img.wp-post-image',['width','height','objectFit']);
+  grab('relImgWrap','.post-related .image_wrapper',['width','height']);
+  grab('authorBoxCol','.author-box',['backgroundColor','padding','borderRadius','border']);
+  grab('authorBoxWrap','.author-box-wrapper',['backgroundColor','padding','borderRadius','display','alignItems','minHeight']);
+  grab('avatarWrap','.avatar-wrapper',['width','marginRight','float']);
+  grab('avatarImg','.avatar-wrapper img',['width','height','borderRadius']);
+  grab('ulEl','.the_content_wrapper ul',['marginLeft','paddingLeft','marginTop','marginBottom']);
+  grab('postNav','.post-nav',['textAlign','marginBottom','paddingTop','paddingBottom']);
+  grab('postNavBtn','.next-prev-nav .button',['width','height','backgroundColor','borderRadius','color']);
+  grab('hr','.post-related .hr_color',['borderTop','borderTopColor','marginTop','marginBottom','height','backgroundColor']);
+  grab('readmoreLabel','.post-related .button_label',['fontSize','color','textTransform','fontFamily']);
+  grab('readmoreBtn','.post-related .desc .button',['width','height','backgroundColor','padding','marginTop']);
+  grab('form3col','.comment-form-author',['width','float','marginRight','display']);
+  grab('cookieLabel','.comment-form-cookies-consent label',['fontSize','fontWeight','color']);
+  grab('submitP','.form-submit',['textAlign','marginTop']);
+  // related section_wrapper padding & related adjustment
+  grab('relAdj','.section-related-adjustment',['paddingTop','paddingBottom','marginTop']);
+  grab('firstImageColWrap','.single-photo-wrapper.image .image_wrapper',['width','textAlign']);
+  return out;
+});
+console.log(JSON.stringify(res,null,1));await b.close();

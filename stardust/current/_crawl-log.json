@@ -1,0 +1,17 @@
+{
+  "discovery": {
+    "fetchTechnique": "headless",
+    "count": 9,
+    "concurrency": 3
+  },
+  "consent": {
+    "method": "auto"
+  },
+  "favicon": {
+    "url": "https://indiauncharted.com/wp-content/uploads/2026/02/ind-chr-copy-1-e1771393430398.png",
+    "file": "assets/favicon.png"
+  },
+  "crawl": {
+    "failures": []
+  }
+}

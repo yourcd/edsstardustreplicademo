@@ -1,0 +1,148 @@
+/* ============================================================
+   India Uncharted — HOME archetype CSS (imports canon.css)
+   ============================================================ */
+
+.iu-main { overflow-x: hidden; }
+
+/* ---------------- HERO (linen canvas, photo right, brown serif copy) ---------------- */
+.hero { position: relative; height: 780px; background: var(--linen); overflow: hidden; }
+.hero__photo {
+  position: absolute; top: 0; right: 0; width: 52%; height: 100%;
+  background-size: cover; background-position: center;
+  /* organic curved left edge */
+  -webkit-mask-image: radial-gradient(130% 105% at 115% 50%, #000 64%, transparent 67%);
+          mask-image: radial-gradient(130% 105% at 115% 50%, #000 64%, transparent 67%);
+  border-bottom-left-radius: 40% 60%;
+}
+.hero__inner { position: relative; z-index: 2; height: 100%; }
+.hero__copy { position: absolute; left: 24px; top: 250px; }
+.hero__title { font-family: var(--font-display); font-size: 78px; line-height: 1.0; font-weight: 700; color: var(--brown); letter-spacing: -0.01em; }
+.hero__sub { font-family: var(--font-head); font-size: 26px; line-height: 1.35; margin-top: 18px; color: var(--brown); }
+.hero__form {
+  position: absolute; left: 24px; bottom: 100px;
+  background: var(--white); border-radius: 60px; padding: 18px 20px;
+  display: flex; align-items: center; gap: 12px; box-shadow: var(--shadow-lg);
+}
+.hero__form input {
+  font-family: var(--font-body); font-size: 14px; color: var(--ink);
+  padding: 14px 16px; border: 1px solid var(--rule-md); border-radius: 8px; background: var(--white);
+  width: 150px;
+}
+.hero__submit { border-radius: 8px; padding: 14px 22px; white-space: nowrap; }
+
+/* ---------------- SPECIAL PACKAGES ---------------- */
+.packages { padding: 95px 0 135px; background: var(--white); }
+.packages__head { display: flex; align-items: center; gap: 18px; margin-bottom: 28px; }
+.packages__head h2 { font-size: 40px; line-height: 55px; }
+.packages__badge {
+  font-family: var(--font-body); font-size: 12px; font-weight: 600; color: var(--white);
+  background: var(--coral); border-radius: 100px; padding: 8px 18px;
+}
+.packages__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.pkg-card {
+  background: var(--white); border-radius: 20px; overflow: hidden;
+  box-shadow: var(--shadow); border: 1px solid var(--rule);
+}
+.pkg-card__media { position: relative; aspect-ratio: 3/2; overflow: hidden; }
+.pkg-card__media img { width: 100%; height: 100%; object-fit: cover; }
+.pkg-card__dur {
+  position: absolute; top: 14px; left: 14px;
+  background: rgba(41,38,34,.85); color: var(--white); font-family: var(--font-body);
+  font-size: 12px; font-weight: 500; border-radius: 100px; padding: 5px 12px;
+}
+.pkg-card__body { padding: 18px 20px 22px; }
+.pkg-card__body h3 { font-family: var(--font-head); font-size: 16.65px; line-height: 25px; font-weight: 600; color: var(--brown); min-height: 50px; }
+.pkg-card__loc { font-size: 13px; color: var(--brown-lt); margin: 6px 0 14px; }
+.pkg-card__foot { display: flex; align-items: center; justify-content: space-between; }
+.pkg-card__price { font-family: var(--font-head); font-size: 16px; color: var(--brown); }
+.packages__cta { text-align: center; margin-top: 40px; }
+
+/* ---------------- WELCOME ---------------- */
+.welcome { padding: 70px 0 90px; background: var(--white); }
+.welcome__inner { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: center; }
+.welcome__media { position: relative; min-height: 540px; }
+.welcome__img { position: absolute; border-radius: 300px 300px 12px 12px; object-fit: cover; box-shadow: var(--shadow-lg); }
+.welcome__img--a { width: 300px; height: 420px; left: 20px; top: 0; z-index: 2; border-radius: 300px 300px 0 0; }
+.welcome__img--b { width: 260px; height: 300px; right: 20px; bottom: 0; border-radius: 16px; }
+.welcome__copy h2 { font-size: 40px; line-height: 50px; margin-bottom: 18px; }
+.welcome__copy p { font-size: 15px; line-height: 30px; color: var(--ink); margin: 0 0 16px; }
+.welcome__copy .iu-btn { margin-top: 8px; }
+
+/* ---------------- FIND TRAVEL PERFECTION ---------------- */
+.perfection { padding: 120px 0 138px; background: var(--linen); }
+.perfection__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 55px; }
+.feature { background: var(--white); border-radius: 16px; padding: 55px 34px; text-align: center; box-shadow: var(--shadow); }
+.feature__icon { font-size: 40px; color: var(--coral); margin-bottom: 18px; }
+.feature h4 { font-family: var(--font-head); font-size: 20px; color: var(--coral); margin-bottom: 12px; }
+.feature p { font-size: 14px; line-height: 26px; color: var(--ink); }
+
+/* ---------------- TOP DESTINATIONS ---------------- */
+.topdest { padding: 90px 0 120px; background: var(--white); }
+.topdest__grid { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 275px 275px; gap: 22px; margin-top: 55px; }
+.dest-card {
+  position: relative; border-radius: 16px; overflow: hidden;
+  background-size: cover; background-position: center; display: flex; align-items: flex-end;
+}
+.dest-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.55), transparent 55%); }
+.dest-card--tall { grid-row: span 2; }
+.dest-card__label { position: relative; z-index: 2; color: var(--white); font-family: var(--font-head); font-size: 22px; padding: 18px 20px; letter-spacing: .04em; }
+.topdest .packages__cta { margin-top: 36px; }
+
+/* ---------------- TESTIMONIALS ---------------- */
+.testi { padding: 112px 0; background-size: cover; background-position: center; }
+.testi__card {
+  background: var(--white); border-radius: 16px; max-width: 744px; margin: 45px auto 0;
+  padding: 50px 50px; text-align: center; box-shadow: var(--shadow-lg); position: relative;
+}
+.testi__quote { font-family: var(--font-display); font-size: 60px; color: var(--brown-xlt); line-height: .5; }
+.testi__card h3 { font-family: var(--font-head); font-size: 20px; color: var(--brown); margin: 10px 0 14px; }
+.testi__card p { font-size: 14px; line-height: 26px; color: var(--ink); }
+.testi__stars { color: #f0a500; font-size: 18px; margin: 14px 0 8px; }
+.testi__author { font-family: var(--font-head); color: var(--coral); font-size: 15px; }
+
+/* ---------------- THEMES ---------------- */
+.themes { padding: 60px 0 140px; background: var(--white); }
+.themes__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 50px; }
+.theme-card {
+  position: relative; height: 360px; border-radius: 16px; overflow: hidden;
+  background-size: cover; background-position: center; display: flex; align-items: flex-end;
+}
+.theme-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.5), transparent 60%); }
+.theme-card__label { position: relative; z-index: 2; color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 14px; padding: 16px 18px; }
+
+/* ---------------- CTA BANNER ---------------- */
+.ctabanner { position: relative; padding: 160px 0; background-size: cover; background-position: center; text-align: center; color: var(--white); }
+.ctabanner::after { content: ""; position: absolute; inset: 0; background: rgba(30,24,18,.35); }
+.ctabanner .iu-container { position: relative; z-index: 2; }
+.ctabanner h2 { color: var(--white); font-family: var(--font-display); font-size: 44px; line-height: 1.15; margin-bottom: 24px; }
+
+/* ---------------- BLOG ---------------- */
+.blog { padding: 130px 0 145px; background: var(--white); }
+.blog__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px 20px; margin-top: 50px; }
+.blog-card { border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--rule); background: var(--white); }
+.blog-card__media { height: 317px; overflow: hidden; }
+.blog-card__media img { width: 100%; height: 100%; object-fit: cover; }
+.blog-card__body { padding: 22px 22px 26px; }
+.blog-card__title { font-family: var(--font-head); font-size: 18px; line-height: 27px; font-weight: 600; color: var(--brown); margin-bottom: 16px; min-height: 81px; }
+.blog-card__more { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--coral); }
+
+/* ---------------- RESPONSIVE (360 pass) ---------------- */
+@media (max-width: 991px) {
+  .hero__inner { flex-direction: column; align-items: flex-start; }
+  .hero__form { width: 100%; }
+  .packages__grid, .perfection__grid { grid-template-columns: 1fr 1fr; }
+  .welcome__inner { grid-template-columns: 1fr; gap: 30px; }
+  .themes__grid, .blog__grid { grid-template-columns: 1fr 1fr; }
+  .topdest__grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .dest-card, .dest-card--tall { grid-row: auto; height: 200px; }
+}
+@media (max-width: 600px) {
+  .hero { min-height: 620px; }
+  .hero__title { font-size: 44px; }
+  .hero__form { grid-template-columns: 1fr; }
+  .packages__head { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .packages__head h2 { font-size: 30px; line-height: 40px; }
+  .packages__grid, .perfection__grid, .themes__grid, .blog__grid, .topdest__grid { grid-template-columns: 1fr; }
+  .welcome__media { min-height: 360px; }
+  .ctabanner h2 { font-size: 30px; }
+}

@@ -1,0 +1,65 @@
+/* itinerary — day-by-day tour itinerary. Reference package.css .itinerary*. */
+
+.itinerary .itinerary-day {
+  padding: 26px 0 30px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.itinerary .itinerary-day:last-child {
+  border-bottom: 0;
+}
+
+.itinerary .itinerary-day > p {
+  font-size: 15px;
+  line-height: 30px;
+  color: var(--ink, var(--text-color));
+  margin: 0 0 12px;
+}
+
+/* day-head: authored as a body <p> that renders bold (role parity with live) */
+.itinerary .itinerary-day > p:first-of-type {
+  font-family: var(--heading-font-family);
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: var(--brown);
+  margin: 0 0 14px;
+}
+
+.itinerary .itinerary-day ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.itinerary .itinerary-day li {
+  font-size: 15px;
+  line-height: 33px;
+  color: var(--ink, var(--text-color));
+}
+
+.itinerary .itinerary-day ul ul {
+  margin: 4px 0;
+}
+
+.itinerary .itinerary-day strong {
+  color: inherit;
+}
+
+@media (width <= 600px) {
+  .itinerary .itinerary-day {
+    padding: 14px 0 16px;
+  }
+
+  .itinerary .itinerary-day > p {
+    margin-bottom: 8px;
+  }
+
+  .itinerary .itinerary-day > p:first-of-type {
+    font-size: 21px;
+    margin-bottom: 8px;
+  }
+
+  .itinerary .itinerary-day li {
+    line-height: 26px;
+  }
+}

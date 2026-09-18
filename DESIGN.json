@@ -1,0 +1,58 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:replica",
+    "mode": "bounded-single",
+    "synthesizedFrom": [
+      "stardust/current/pages/index.json",
+      "Phase-3 CSS lift"
+    ]
+  },
+  "colors": {
+    "brown": "#8A7156",
+    "brownLt": "#B09A80",
+    "brownXlt": "#D4C4B0",
+    "coral": "#E3876E",
+    "coralDk": "#D0705A",
+    "linen": "#E5E3DC",
+    "white": "#FFFFFF",
+    "ink": "#333333",
+    "rule": "rgba(138,113,86,0.18)",
+    "ruleMd": "rgba(138,113,86,0.35)"
+  },
+  "typography": {
+    "display": "'Bodoni Moda', serif",
+    "body": "'Poppins', Arial, Tahoma, sans-serif",
+    "accents": ["'Montserrat'", "'Nunito Sans'", "'Rubik'"],
+    "sizes": { "small": "13px", "normal": "16px", "medium": "20px", "large": "36px", "huge": "42px" }
+  },
+  "rounded": { "card": "20px", "pill": "100px", "small": "10px" },
+  "shadow": {
+    "base": "0 2px 40px rgba(138,113,86,0.10)",
+    "lg": "0 8px 60px rgba(138,113,86,0.15)"
+  },
+  "easing": {
+    "ease": "cubic-bezier(0.25,0.46,0.45,0.94)",
+    "easeOut": "cubic-bezier(0.16,1,0.3,1)"
+  },
+  "container": { "maxWidth": "1342px" },
+  "extensions": {
+    "modules": [
+      { "name": "site-header", "status": "candidate", "where": "all pages" },
+      { "name": "hero-enquiry", "status": "candidate", "where": "home" },
+      { "name": "package-cards", "status": "candidate", "where": "home, listings" },
+      { "name": "welcome-intro", "status": "candidate", "where": "home" },
+      { "name": "feature-triplet", "status": "candidate", "where": "home" },
+      { "name": "destination-grid", "status": "candidate", "where": "home, destinations" },
+      { "name": "testimonials", "status": "candidate", "where": "home" },
+      { "name": "theme-cards", "status": "candidate", "where": "home" },
+      { "name": "cta-banner", "status": "candidate", "where": "home" },
+      { "name": "blog-cards", "status": "candidate", "where": "home, blogs" },
+      { "name": "site-footer", "status": "candidate", "where": "all pages" }
+    ],
+    "fonts": {
+      "source": "google-fonts",
+      "families": ["Bodoni Moda", "Poppins", "Montserrat", "Nunito Sans", "Rubik"],
+      "licensed": false
+    }
+  }
+}

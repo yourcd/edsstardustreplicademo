@@ -1,0 +1,164 @@
+/* ============================================================
+   India Uncharted — SHARED CANON (tokens, fonts, header, footer)
+   Lifted verbatim from the live site's CSS custom properties and
+   computed styles. Inherited by every archetype prototype.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400&family=Playfair+Display:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Tenor+Sans&family=Rubik:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --brown: #8A7156;
+  --brown-lt: #B09A80;
+  --brown-xlt: #D4C4B0;
+  --coral: #E3876E;
+  --coral-dk: #D0705A;
+  --linen: #E5E3DC;
+  --white: #FFFFFF;
+  --ink: #2B2B2B;
+  --footer-bg: #292622;
+  --rule: rgba(138,113,86,0.18);
+  --rule-md: rgba(138,113,86,0.35);
+  --shadow: 0 2px 40px rgba(138,113,86,0.10);
+  --shadow-lg: 0 8px 60px rgba(138,113,86,0.15);
+  --ease: cubic-bezier(0.25,0.46,0.45,0.94);
+  --ease-out: cubic-bezier(0.16,1,0.3,1);
+  --container: 1342px;
+  --font-display: 'Bodoni Moda', serif;
+  --font-head: 'Tenor Sans', Arial, Tahoma, sans-serif;
+  --font-body: 'Poppins', Arial, Tahoma, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 32px;
+  color: var(--ink);
+  background: var(--white);
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, h4, h5 { font-family: var(--font-head); color: var(--brown); font-weight: 500; margin: 0; }
+
+.iu-container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+/* section title block */
+.iu-sect-title { text-align: center; }
+.iu-sect-title h2 { font-size: 40px; line-height: 55px; font-weight: 500; }
+.iu-sect-title p { max-width: 720px; margin: 8px auto 0; color: var(--ink); font-size: 15px; }
+
+/* buttons */
+.iu-btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--white);
+  background: var(--coral);
+  border: 0;
+  border-radius: 5px;
+  padding: 4px 20px;
+  cursor: pointer;
+  transition: background .3s var(--ease);
+}
+.iu-btn:hover { background: var(--coral-dk); }
+.iu-btn--pill { border-radius: 100px; padding: 12px 34px; }
+
+/* ---------------- HEADER (fixed white bar, 80px, from top) ---------------- */
+.iu-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  height: 80px; background: var(--white);
+  box-shadow: 0 2px 18px rgba(138,113,86,0.08);
+}
+.iu-header .iu-container {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 80px; max-width: 1430px; padding: 0 40px;
+}
+.iu-header__logo img { height: 60px; width: auto; }
+.iu-nav { display: flex; align-items: center; }
+.iu-nav a { font-family: 'Rubik', Arial, sans-serif; font-size: 15px; font-weight: 600; line-height: 30px; text-transform: uppercase; color: #444; padding: 0 18px; }
+.iu-nav a:hover, .iu-nav a.is-active { color: var(--coral); }
+.iu-header__phone {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--coral); color: var(--white);
+  font-family: var(--font-body); font-weight: 600; font-size: 14px;
+  border-radius: 100px; padding: 10px 20px;
+}
+.iu-header__phone:hover { background: var(--coral-dk); color: var(--white); }
+.iu-burger { display: none; }
+
+/* ---------------- INNER PAGE BANNER (shared: package, destination, activity, listing, contact, article) ---------------- */
+.iu-pagebanner {
+  position: relative; /* starts at y0; the fixed 80px header overlaps it (matches live) */
+  min-height: 449px; display: flex; align-items: center; justify-content: center;
+  padding-top: 80px; /* keep title vertically centered in the visible area below the header */
+  background-size: cover; background-position: center; text-align: center;
+}
+.iu-pagebanner::after { content: ""; position: absolute; inset: 0; background: rgba(70,52,36,.42); }
+.iu-pagebanner__title {
+  position: relative; z-index: 2; color: var(--white);
+  font-family: 'Playfair Display', Georgia, serif; font-size: 50px; font-weight: 600; line-height: 1.2;
+  padding: 0 24px;
+}
+
+/* ---------------- FOOTER (live: ~461px total) ---------------- */
+.iu-footer { background: var(--footer-bg); color: #cfc7bd; padding: 60px 0 0; }
+.iu-footer a { color: #cfc7bd; }
+.iu-footer a:hover { color: var(--coral); }
+.iu-footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1.1fr 1fr 1.1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+.iu-footer__logo img { height: 46px; width: auto; margin-bottom: 14px; }
+.iu-footer p { font-size: 13px; line-height: 23px; margin: 0 0 12px; }
+.iu-footer h4 { font-family: var(--font-head); color: var(--white); font-size: 20px; margin: 0 0 16px; }
+.iu-footer ul { list-style: none; margin: 0; padding: 0; }
+.iu-footer li { margin-bottom: 8px; font-size: 13px; }
+.iu-footer__contact-row { display: flex; gap: 8px; align-items: flex-start; font-size: 13px; line-height: 20px; margin-bottom: 10px; }
+.iu-footer__social { display: flex; gap: 10px; margin-top: 14px; }
+.iu-footer__social a {
+  width: 30px; height: 30px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255,255,255,.25); font-size: 13px;
+}
+.iu-footer__map img { width: 100%; height: 150px; object-fit: cover; border-radius: 6px; }
+.iu-footer__bar { border-top: 1px solid rgba(255,255,255,.12); text-align: center; padding: 15px 0; font-size: 13px; }
+
+/* ---------------- FIXED FLOATING CHROME (repeats at every stitch seam — symmetric with live) ---------------- */
+.iu-whatsapp {
+  position: fixed; left: 18px; bottom: 22px; z-index: 60;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center;
+  font-size: 24px; box-shadow: 0 4px 14px rgba(0,0,0,.2);
+}
+.iu-scrolltop {
+  position: fixed; right: 18px; bottom: 22px; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--coral); color: #fff; display: flex; align-items: center; justify-content: center;
+  font-size: 20px; box-shadow: 0 4px 14px rgba(138,113,86,.25);
+}
+
+/* ---------------- responsive canon ---------------- */
+@media (max-width: 991px) {
+  .iu-nav { display: none; }
+  .iu-header__phone { display: none; }
+  .iu-header .iu-container { justify-content: center; position: relative; }
+  .iu-burger { display: inline-flex; color: var(--brown); font-size: 26px; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
+  .iu-footer__grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+}
+@media (max-width: 600px) {
+  .iu-sect-title h2 { font-size: 30px; line-height: 40px; }
+  .iu-footer__grid { grid-template-columns: 1fr; gap: 34px; padding-bottom: 30px; }
+  .iu-footer { padding: 40px 0 0; }
+  .iu-footer li { margin-bottom: 18px; font-size: 14px; }
+  .iu-footer h4 { margin-bottom: 22px; }
+  .iu-footer__contact-row { margin-bottom: 16px; }
+  .iu-footer__map img { height: 220px; }
+  .iu-header .iu-container { padding: 14px 20px; }
+  .iu-pagebanner { min-height: 300px; padding-top: 92px; }
+  .iu-pagebanner__title { font-size: 30px; line-height: 36px; }
+}

@@ -1,0 +1,117 @@
+/* ============================================================
+   India Uncharted — LISTING (Destinations index) archetype
+   Body-only. Header / footer / floating chrome = canon.
+   Live: Muffin builder 3-col grid of one-third columns,
+   each an image_frame with an absolutely-positioned caption <p>.
+   ============================================================ */
+
+/* Page-local banner override: live "hero" region is 474px tall
+   (padding-top 236 + 60px title + padding-bottom 178) — taller than the
+   canon 449px default, which otherwise floats the whole grid up ~25px.
+   Canon issue noted; overridden locally to match this page's live hero.
+   Scoped to >600 so the mobile banner (handled below) is unaffected. */
+@media (min-width: 601px) {
+  .iu-pagebanner {
+    min-height: 474px;
+    align-items: flex-start;
+    padding-top: 236px;
+  }
+}
+
+/* section wrapper — live wrap max-width 1322, section padding-top 40;
+   live cards carry margin-bottom 40 so there is a 40px trailing gap below
+   the last row before the footer — replicate with bottom padding. */
+.ld-listing {
+  padding: 40px 0 40px;
+}
+
+.ld-grid {
+  max-width: 1322px;
+  margin: 0 auto;
+  /* live insets each one-third column ~13px + ~26px inter-column gap */
+  padding: 0 13px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 26px;
+  row-gap: 40px;
+  /* live theme wrap is ~5px left of true viewport center at 1440 */
+  position: relative;
+  left: -5px;
+}
+
+/* card — live .column.one-third .image_frame (overflow hidden, no radius) */
+.ld-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.ld-card__thumb {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.ld-card__thumb img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 636 / 426;   /* live image renders 3:2, object-fit fill (no distortion) */
+  height: auto;
+  object-fit: cover;
+  transition: transform .4s var(--ease);
+}
+
+.ld-card:hover .ld-card__thumb img { transform: scale(1.05); }
+
+/* caption — live <p class="wp-caption-text">, absolute bottom-left, white 30px */
+.ld-card__cap {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  z-index: 2;
+  margin: 0;
+  padding: 5px 10px;
+  font-family: var(--font-body);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--white);
+}
+
+/* ---------------- responsive ---------------- */
+@media (max-width: 991px) {
+  .ld-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* live collapses the destination grid to 1 column at <=767px */
+@media (max-width: 767px) {
+  .ld-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  /* live mobile header is a ~60px IN-FLOW bar, not the fixed 80px desktop bar.
+     Canon keeps .iu-header fixed at all widths; at mobile that fixed bar
+     re-stamps at every stitch seam (asymmetric with live, which shows the
+     header once at the top). Override to in-flow 60px here so it appears
+     once and content flows beneath it — no margin-top compensation needed.
+     Canon issue noted; page-local override. */
+  .iu-header { position: static; height: 60px; box-shadow: none; }
+  .iu-main { margin-top: 0; }
+  /* live mobile hero region: ~196px tall (padding 80/80 around the 36px title) */
+  .iu-pagebanner {
+    min-height: 196px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    align-items: center;
+  }
+  .iu-pagebanner__title { font-size: 30px; line-height: 36px; }
+  /* live grid: single column, 33px side padding, ~40px row gap, 40px top */
+  .ld-listing { padding: 40px 0 40px; }
+  .ld-grid {
+    max-width: 700px;
+    grid-template-columns: 1fr;
+    padding: 0 33px;
+    column-gap: 0;
+    row-gap: 20px;
+    left: 0;
+  }
+}
