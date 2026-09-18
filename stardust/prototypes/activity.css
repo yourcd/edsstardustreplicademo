@@ -1,0 +1,40 @@
+/* ============================================================
+   India Uncharted — ACTIVITY archetype (activity/cycle-tour)
+   Empty term-archive listing: banner + section title + empty grid.
+   Links canon.css first; only authors banner→footer body.
+   ============================================================ */
+
+/* Page-local banner override: live #Subheader here is padded
+   236px/178px (total 474px) with the title top-anchored at y=236,
+   whereas canon's shared .iu-pagebanner is flex-centered at 449px.
+   Match live exactly for this page. Title weight is 700 on live
+   (canon uses 600). Noted as a canon discrepancy. */
+.iu-pagebanner {
+  min-height: 0;
+  padding: 236px 6px 178px;
+  align-items: flex-start;
+}
+.iu-pagebanner__title { font-weight: 700; }
+
+/* Archive listing section */
+.activity-listing { padding: 60px 0; }
+.activity-listing__title {
+  font-family: var(--font-head);
+  font-size: 40px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--brown);
+  text-align: left;
+  margin: 0 0 40px;
+}
+.activity-listing__grid { /* empty on live (no published items) */ }
+
+@media (max-width: 600px) {
+  /* Live mobile header is a ~60px in-flow bar, not the 80px fixed
+     desktop bar; pull the banner up accordingly. Live #Subheader
+     padding collapses to 80px 0 (196px tall); section title 24px. */
+  .iu-main { margin-top: 60px; }
+  .iu-pagebanner { padding: 80px 0; }
+  .activity-listing { padding: 60px 0; }
+  .activity-listing__title { font-size: 24px; line-height: 33px; margin-bottom: 40px; }
+}

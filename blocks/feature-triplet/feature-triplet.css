@@ -1,0 +1,75 @@
+/* feature-triplet — India Uncharted. Values lifted from home.css .perfection / .feature. */
+
+/* linen band spanning the full section */
+.section.feature-triplet-container {
+  margin: 0;
+  padding: 120px 0 138px;
+  background: var(--linen);
+}
+
+/* centered section title + lede above the grid */
+.feature-triplet-container .default-content-wrapper {
+  text-align: center;
+}
+
+.feature-triplet-container .default-content-wrapper h2 {
+  font-size: 40px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.feature-triplet-container .default-content-wrapper p {
+  max-width: 720px;
+  margin: 8px auto 0;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.feature-triplet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 55px;
+}
+
+.feature-triplet .feature-triplet-item {
+  padding: 55px 34px;
+  border-radius: 16px;
+  background: var(--background-color);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.feature-triplet .feature-triplet-icon {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 40px;
+  line-height: 1;
+  color: var(--coral);
+}
+
+.feature-triplet .feature-triplet-body h4 {
+  margin: 0 0 12px;
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  color: var(--coral);
+}
+
+.feature-triplet .feature-triplet-body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--text-color);
+}
+
+@media (width <= 991px) {
+  .feature-triplet {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width <= 600px) {
+  .feature-triplet {
+    grid-template-columns: 1fr;
+  }
+}

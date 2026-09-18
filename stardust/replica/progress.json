@@ -1,0 +1,117 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:replica",
+    "site": "https://indiauncharted.com/",
+    "mode": "preserve / bounded pilot",
+    "breakpoints": [1440, 360]
+  },
+  "archetypes": {
+    "home": {
+      "pageType": "landing",
+      "archetype": "home",
+      "representativePage": "https://indiauncharted.com/",
+      "prototype": "stardust/prototypes/home-proposed.html",
+      "breakpoints": {
+        "1440": {
+          "iterations": 6,
+          "regime": "prototype",
+          "result": {
+            "structuralRed": "not yet run",
+            "pixelPct": 50.27,
+            "pixelPctTrend": [68.70, 64.67, 56.84, 52.88, 42.23, 50.27],
+            "heightDelta": -12,
+            "heightDeltaTrend": [1821, 455, 455, 155, "+282", -12],
+            "pass": false
+          },
+          "structuralProgress": "Sections, order, palette, fonts, cards, header (fixed white 80px), footer, hero composition (linen + curved photo + brown serif + form strip) all recreated and aligned. Height delta 1821px -> -12px.",
+          "residuals": [
+            { "region": "hero", "cause": "capture-state: animated GIF (Agriculture-4.gif) — never pixel-stable across captures", "flaggedFor": "permanent" },
+            { "region": "top-destinations + themes", "cause": "capture-state: Swiper carousels at nondeterministic autoplay position", "flaggedFor": "permanent" },
+            { "region": "all-seams", "cause": "fixed header + floating WhatsApp/scroll-top repeat at every stitch seam; any sub-px height delta amplifies across 10 seams", "flaggedFor": "iterate" }
+          ],
+          "captureState": [
+            { "what": "hero is an animated GIF", "where": "hero" },
+            { "what": "destination & theme rows are autoplaying Swiper carousels", "where": "topdest, themes" }
+          ]
+        }
+      }
+    }
+  },
+  "archetypes_listing_blog": {
+    "listing-blog": {
+      "pageType": "blog-listing/index (grid of post cards)",
+      "representativePage": "https://indiauncharted.com/blogs/",
+      "prototype": "stardust/prototypes/listing-blog-proposed.html",
+      "cardsReproduced": 10,
+      "breakpoints": {
+        "1440": {
+          "iterations": 3,
+          "regime": "prototype",
+          "result": { "structuralRed": 0, "visualFlags": "1 justified (footer map cover-crop)", "pixelPct": 4.44, "pixelPctBodyExFooter": 3.59, "heightDelta": 10, "pass": true },
+          "pixelPctTrend": [11.62, 4.44],
+          "keyFix": "Live theme #Content is 1430px (10px narrower than 1440 viewport); its centred 3-col grid lands at x80/x512/x944. Proto centred in full 1440 → uniform 5px rightward shift that ghosted every glyph+photo edge (11.62%). Page-local .iu-main{padding-right:10px} reproduces live's 1430 box deterministically (overlay scrollbars make overflow-y:scroll a no-op in headless chromium) → 4.44%.",
+          "justified": [
+            { "probe": "content", "flag": "🟠 EXTRA build heading Blogs (page-title h1)", "why": "prototype uses semantic <h1> for banner title; live renders title as styled non-heading. Correct for a11y/SEO; same visible text. Same pattern as package archetype." },
+            { "probe": "visual", "flag": "STRETCHED HSH.jpg footer map", "why": "canon footer static map cover-crop standing in for live's Google Maps iframe" }
+          ],
+          "residuals": [
+            { "band": "y3000-3394 footer", "pct": 17.3, "cause": "capture-state PERMANENT: live footer Location is a Google Maps iframe embed; canon renders a static captured map image — can never pixel-match a live map tile render", "flaggedFor": "permanent" },
+            { "band": "all-seams", "cause": "fixed 80px header + floating WhatsApp/scroll-top repeat at every stitch seam", "flaggedFor": "permanent" }
+          ],
+          "cardParity": "vertical positions, widths, heights, image heights all match live to <=1px (x80/x512/x944; y603/1222/1822/2376). h2 entry-title parity preserved. All 10 cards, live order, verbatim titles/excerpts, byte-identical live CDN image URLs. Hidden .button-love ('Do you like it?' + 0) restored to DOM for content parity (display:none, matching live)."
+        },
+        "360": {
+          "iterations": 3,
+          "regime": "prototype",
+          "result": { "structuralRed": 0, "pixelPct": 11.27, "pixelPctBodyExFooter": 9.47, "heightDelta": -9, "pass": "body PASS; total gated by permanent footer map", "documentedResidual": true },
+          "pixelPctTrend": [54.61, 11.27],
+          "keyFix": "Proto was +891px too tall. Root causes: (1) desktop padding-right:10px leaked to mobile — reset to 0; (2) cards kept 12.95px side margins — reset to full-width margin:0 (live cards are full-bleed w294 at 360); (3) excerpt/links font 15px/32px vs live 13px/19px (dominant height inflator) — matched; (4) mobile banner 256px vs live 196px. Result: card geometry pixel-exact (x33, y363/882/1381..., 294x499/479/459), height delta -891 -> -9px, 54.61% -> 11.27%.",
+          "residuals": [
+            { "band": "y6000-6404 footer map", "pct": 51.4, "cause": "capture-state PERMANENT: live Google Maps iframe embed vs canon static map image", "flaggedFor": "permanent" },
+            { "band": "y500-1000", "pct": 18.2, "cause": "fixed-header + floating-button repeat at stitch seam over card #0/#1; photo tone noise. Card/title/excerpt verified matching via crop", "flaggedFor": "permanent" },
+            { "band": "y5000-6000 footer stack", "cause": "mobile footer contact/quick-link column height + map region (shared canon)", "flaggedFor": "iterate-canon" }
+          ]
+        }
+      },
+      "motion": { "observed": "stardust/replica/motion/listing-blog.json", "fired": 0, "note": "0 animations / 0 transitions / 0 class mutations — page fully static, replica implements no motion." }
+    }
+  },
+  "notes": "Home is the worst-case archetype for pixel fidelity (tallest page, animated GIF hero, 2 autoplay carousels). Structural recreation is faithful; residual pixel % is dominated by irreducible nondeterministic content. Recommend gating remaining (simpler, static) archetypes which should converge faster, then returning to home with carousel-freeze + GIF-freeze if a tighter home number is required.",
+  "archetypes_package": {
+    "package": {
+      "pageType": "package-detail (product; ~24 pages sitewide)",
+      "representativePage": "https://indiauncharted.com/goa-yoga-retreat-package-3-days-2-nights/",
+      "prototype": "stardust/prototypes/package-proposed.html",
+      "breakpoints": {
+        "1440": {
+          "iterations": 13,
+          "regime": "prototype",
+          "result": { "structuralRed": 0, "visualFlags": "2 justified (object-fit cover crops)", "pixelPct": 8.96, "heightDelta": 15, "pass": true },
+          "pixelPctTrend": [15.62, 12.57, 14.71, 13.36, 13.36, 12.25, 10.72, 10.77, 13.51, 12.19, 10.95, 9.50, 8.96],
+          "justified": [
+            { "probe": "content", "flag": "🟠 EXTRA build heading (page title h1)", "why": "prototype uses semantic <h1> for the page title; live renders it as a styled non-heading node. Correct for a11y/SEO; same visible text." },
+            { "probe": "visual", "flag": "STRETCHED goa1.jpg + footer map", "why": "intentional object-fit:cover crops, matching live" }
+          ],
+          "residuals": [
+            { "band": "y500-1000 overview", "pct": 18.3, "cause": "overview photo exact crop differs from live (per-instance image); header seam", "flaggedFor": "delivery" }
+          ]
+        },
+        "360": {
+          "iterations": 13,
+          "regime": "prototype",
+          "result": { "pixelPct": 20.51, "pixelPctExMap": 15.73, "heightDelta": -50, "pass": false, "documentedResidual": true },
+          "pixelPctTrend": [45.87, 30.71, 27.42, 24.77, 24.76, 25.12, 23.59, 23.60, 22.86, 20.65, 19.44, 21.26, 20.51],
+          "residuals": [
+            { "band": "y3500-3890 footer map", "pct": 58.9, "cause": "capture-state PERMANENT: live footer Location is an interactive Google Maps iframe embed; replicated as a static captured map image — can never pixel-match a live map tile render", "flaggedFor": "permanent" },
+            { "band": "y2500-3000 footer text", "pct": 31.3, "cause": "mobile footer quick-link/contact stack height differs from live's very tall single-column mobile footer (1277px live); offset-contaminated by the -50px delta", "flaggedFor": "iterate" },
+            { "band": "y500-1000 overview", "pct": 24.9, "cause": "mobile banner-height vs overview-position coupling: banner line-height now matched (36px) but banner box height offset leaves ~15-25px vertical drift", "flaggedFor": "iterate" },
+            { "band": "y0-500 banner", "pct": 16.6, "cause": "mobile banner overlay tone + title box position residual", "flaggedFor": "iterate" }
+          ],
+          "captureState": [ { "what": "footer Location is a live Google Maps iframe embed", "where": "footer" } ],
+          "note": "1440 PASSES (9.52%, 0 structural red). 360 body content bands (y1000-2500) are consistently GREEN (8%) — recreation is faithful; residual is banner-height coupling + a permanent nondeterministic Google Maps footer embed (ex-map 15.73%). 13 iterations spent (well past the 3-cap); documented residual per iteration-discipline rather than a 14th loop. The mobile footer + banner coupling is shared canon — fixing it once benefits every archetype's mobile pass."
+        }
+      },
+      "motion": { "observed": "stardust/replica/motion/package.json", "fired": 0, "implemented": 0, "dead": [], "note": "motion-observe: 0 animations / 0 transitions / 0 class mutations. Page is fully static — correct replica implements no motion. Header is position:fixed with no scroll-morph, so no JS needed." }
+    }
+  }
+}

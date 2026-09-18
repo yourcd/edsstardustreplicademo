@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const url=process.argv[2];const isLive=url.includes('indiauncharted.com');
+const UA='Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 Safari/604.1';
+const b=await chromium.launch();const ctx=await b.newContext({viewport:{width:360,height:800},deviceScaleFactor:1,userAgent:UA,isMobile:true});
+const p=await ctx.newPage();await p.goto(url,{waitUntil:'domcontentloaded'});await p.waitForTimeout(isLive?2500:600);
+await p.evaluate(async()=>{for(let y=0;y<document.body.scrollHeight;y+=600){scrollTo(0,y);await new Promise(r=>setTimeout(r,40));}scrollTo(0,0);});await p.waitForTimeout(300);
+const d=await p.evaluate((isLive)=>{const g=s=>{const e=document.querySelector(s);if(!e)return null;const r=e.getBoundingClientRect();return{y:Math.round(r.y+scrollY),h:Math.round(r.height)};};
+ if(isLive)return{quick:g('#Footer .widget_nav_menu'),loc:[...document.querySelectorAll('#Footer h4,#Footer .widgettitle')].map(e=>({t:e.textContent.trim(),y:Math.round(e.getBoundingClientRect().y+scrollY)})),map:g('#Footer iframe')||g('#Footer .location'),bar:g('#Footer .footer_copy, #Footer .copyright')};
+ return{loc:[...document.querySelectorAll('.iu-footer h4')].map(e=>({t:e.textContent.trim(),y:Math.round(e.getBoundingClientRect().y+scrollY)})),map:g('.iu-footer__map img'),bar:g('.iu-footer__bar')};
+},isLive);console.log(url.includes('local')?'PROTO':'LIVE',JSON.stringify(d,null,1));await b.close();

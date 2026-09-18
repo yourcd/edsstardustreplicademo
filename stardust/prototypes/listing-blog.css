@@ -1,0 +1,141 @@
+/* ============================================================
+   India Uncharted — LISTING-BLOG archetype (blogs/)
+   Body only: banner override + "Our Blogs" 3-col grid of post cards.
+   Header / footer / floating chrome / tokens come from canon.css.
+   ============================================================ */
+
+/* ---- Banner: live #Subheader is 474px tall at 1440 (canon default 449) ---- */
+.blog-banner { min-height: 474px; }
+
+/* ---- Blog listing section ---- */
+.blog-section { padding: 40px 0 60px; }
+
+/* Live's theme content area (#Content/.section) is 1430px — 10px narrower than
+   the 1440 viewport — so its centred grid lands at x80/x512/x944. Overlay
+   scrollbars in headless chromium reserve no gutter (overflow-y:scroll was a
+   no-op here), so match live's 1430 deterministically with a 10px right pad on
+   main; this removes the uniform 5px horizontal shift that ghosted every glyph
+   and photo edge across the page. Page-local (canon .iu-main is full-bleed). */
+.iu-main { padding-right: 10px; box-sizing: border-box; }
+
+/* Card band: live container is 1322px centred with 13px inner pad → 1296px
+   inner content; cards are 406px wide with 12.95px side margins, landing card
+   left edges at x80 / x512 / x944 (matches live to ~0.1px). */
+.blog-wrap { width: 100%; max-width: 1322px; margin: 0 auto; padding: 0 13px; }
+
+/* "Our Blogs" heading */
+.blog-heading {
+  font-family: var(--font-head);
+  font-size: 39px;
+  line-height: 54px;
+  font-weight: 500;
+  color: var(--brown);
+  text-align: center;
+  margin: 0 0 35px;
+}
+
+/* ---- Grid (live: col-3 isotope, rows top-aligned, cards keep natural height).
+   Live cards are 406px wide with margin:0 12.95px inside three equal 432px
+   tracks (no grid gap) → card left edges at x80 / x512 / x944. ---- */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0;
+  row-gap: 0;
+  align-items: start;
+}
+
+/* ---- Card ---- */
+.blog-card {
+  margin: 0 12.95px 20px;
+  background: #fff;
+  box-shadow: 0 0 10px 0 #c0c0c0;
+}
+
+.blog-card__media { display: block; overflow: hidden; }
+.blog-card__media img { width: 100%; height: auto; display: block; }
+
+.blog-card__body { padding: 20px 20px 0; }
+
+.blog-card__date { display: none; }
+
+.blog-card__title {
+  font-family: var(--font-head);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--brown);
+  margin: 0 0 15px;
+}
+.blog-card__title a { color: inherit; transition: color .3s var(--ease); }
+.blog-card__title a:hover { color: var(--coral); }
+
+.blog-card__excerpt {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 32px;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 15px;
+}
+
+/* footer bar (love hidden on live; only comment count + read-more shown, right) */
+.blog-card__footer {
+  margin: 0 -20px;
+  padding: 7px 15px;
+  background: rgba(0, 0, 0, 0.02);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.blog-card__love { display: none; }
+.blog-card__links {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 30px;
+  color: #a8a8a8;
+}
+.blog-card__links a { color: #3e2e1d; }
+.blog-card__links a.comments { margin-right: 10px; }
+.blog-card__links a::before {
+  content: "";
+  display: inline-block;
+  width: 13px; height: 13px;
+  margin-right: 6px;
+  vertical-align: -1px;
+  opacity: .7;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* comment bubble outline */
+.blog-card__links a.comments::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23a8a8a8' stroke-width='1.2'%3E%3Cpath d='M14 3H2v9h3v2l3-2h6z'/%3E%3C/svg%3E");
+}
+/* document/text lines */
+.blog-card__links a.more::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23a8a8a8' stroke-width='1.2'%3E%3Cpath d='M4 1h6l3 3v11H4z'/%3E%3Cpath d='M6 6h5M6 9h5M6 12h3'/%3E%3C/svg%3E");
+}
+
+/* ---- Responsive (live: 991 → 2 cols, 767 → 1 col) ---- */
+@media (max-width: 991px) {
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .blog-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  /* live mobile: ~60px in-flow header (not fixed 80px) → main starts below it */
+  .iu-main { margin-top: 60px; padding-right: 0; }
+  .blog-banner { min-height: 196px; }
+  /* live mobile wrap: ~33px side pad, cards go full-width (no side margin) */
+  .blog-wrap { width: 100%; max-width: 700px; padding: 0 33px; }
+  .blog-heading { font-size: 30px; line-height: 40px; margin: 0 0 28px; }
+  .blog-card { margin: 0 0 20px; }
+  /* live mobile excerpt/body shrink to 13px/19px (desktop 15px/32px) — this is
+     the dominant mobile height driver: matching it collapses the +891px delta */
+  .blog-card__excerpt { font-size: 13px; line-height: 19px; }
+  .blog-card__links { font-size: 13px; }
+}

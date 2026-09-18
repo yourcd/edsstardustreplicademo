@@ -1,0 +1,73 @@
+/* page-banner — inner-page title banner. Values lifted from canon.css .iu-pagebanner*. */
+
+/* full-bleed: escape the section container's max-width + padding */
+.page-banner-container .page-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.section.page-banner-container {
+  margin: 0;
+}
+
+.page-banner {
+  position: relative; /* starts at y0; the fixed 80px header overlaps it (matches live) */
+  min-height: 449px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--nav-height); /* keep the title centered in the area below the header */
+  text-align: center;
+  overflow: hidden;
+}
+
+.page-banner .page-banner-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.page-banner .page-banner-bg picture,
+.page-banner .page-banner-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.page-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgb(70 52 36 / 42%);
+}
+
+.page-banner .page-banner-title {
+  position: relative;
+  z-index: 2;
+  padding: 0 24px;
+}
+
+.page-banner .page-banner-title h1,
+.page-banner .page-banner-title h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--display-font-family);
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@media (width <= 600px) {
+  .page-banner {
+    min-height: 300px;
+    padding-top: 92px;
+  }
+
+  .page-banner .page-banner-title h1,
+  .page-banner .page-banner-title h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}

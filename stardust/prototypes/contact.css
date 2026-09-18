@@ -1,0 +1,94 @@
+/* ============================================================
+   India Uncharted — CONTACT archetype (page-local)
+   Inherits canon.css. Author only the #Content body.
+   Live probes @1440: banner 474px; info section pad 40/60,
+   cards linen r10 pad40; enquire section bg linen pad-top60,
+   white form card r10 pad 60/55/40, coral-bordered inputs.
+   ============================================================ */
+
+/* ---- PAGE BANNER (live #Subheader: 474px, padding 236/178) ---- */
+.cx-banner { min-height: 474px; padding-top: 236px; padding-bottom: 178px; align-items: flex-start; }
+.cx-banner .iu-pagebanner__title,
+.cx-banner.iu-pagebanner .iu-pagebanner__title {
+  font-family: 'Playfair Display', Georgia, serif; font-size: 50px; font-weight: 700; line-height: 60px;
+}
+
+/* ---- GET IN TOUCH + INFO CARDS (section pad 40 top / 60 bottom) ---- */
+.cx-info { padding: 40px 0 71px; }
+.cx-info__title {
+  text-align: center; color: var(--brown);
+  font-family: var(--font-head); font-size: 39px; font-weight: 500; line-height: 54px;
+  margin: 0 0 40px;
+}
+.cx-info__grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+}
+.cx-card {
+  background: var(--linen); border-radius: 10px; padding: 40px; text-align: center;
+}
+.cx-card img { width: 100px; height: 100px; margin: 0 auto 11px; }
+.cx-card h6 {
+  font-family: 'Montserrat', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 29px;
+  color: #282828; margin: 0 0 15px;
+}
+.cx-card p {
+  font-family: var(--font-body); font-size: 15px; font-weight: 400; line-height: 32px;
+  color: var(--ink); margin: 0;
+}
+.cx-card a { color: #000; }
+.cx-card__rule { border: 0; height: 0; margin: 0 auto 30px; }
+
+/* ---- ENQUIRE FORM + IMAGE (section bg linen, pad-top 60) ---- */
+.cx-enquire { background: var(--linen); padding: 60px 0 82px; }
+.cx-enquire__grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;
+}
+.cx-form {
+  background: var(--white); border-radius: 10px; padding: 60px 55px 40px;
+  box-shadow: var(--shadow);
+}
+.cx-form__title {
+  text-align: center; color: var(--brown);
+  font-family: var(--font-head); font-size: 39px; font-weight: 500; line-height: 54px;
+  margin: 0 0 47px;
+}
+.cx-form form p { margin: 0 0 28px; line-height: 32px; }
+.cx-form input[type="text"],
+.cx-form input[type="email"],
+.cx-form input[type="tel"] {
+  width: 100%; height: 55px; padding: 10px; border: 1px solid var(--coral); border-radius: 6px;
+  box-shadow: inset 0 0 2px 2px rgba(0,0,0,0.02);
+  font-family: var(--font-body); font-size: 16px; color: #000; background: var(--white);
+}
+.cx-form input::placeholder { color: #757575; opacity: 1; }
+.cx-form__submit {
+  width: 100%; height: 55px; padding: 11px 20px; border: 0; border-radius: 10px;
+  background: var(--coral); color: var(--white); cursor: pointer;
+  font-family: var(--font-body); font-size: 14px; text-align: center;
+  transition: background .3s var(--ease);
+}
+.cx-form__submit:hover { background: var(--coral-dk); }
+.cx-enquire__media { align-self: stretch; }
+.cx-enquire__media img { width: 100%; height: auto; }
+
+/* ---- MOBILE (≤600: live in-flow header ~60px, single column) ---- */
+@media (max-width: 600px) {
+  /* live mobile header is a 60px in-flow bar (not the 80px fixed canon bar);
+     making it static kills fixed-header stitch-seam repeats and matches live */
+  .iu-header { position: static; height: 60px; }
+  .iu-header .iu-container { height: 60px; }
+  .iu-main { margin-top: 0; }
+  .cx-info .iu-container, .cx-enquire .iu-container { padding: 0 33px; }
+  .cx-banner.iu-pagebanner { min-height: 196px; padding-top: 80px; padding-bottom: 80px; }
+  .cx-banner.iu-pagebanner .iu-pagebanner__title { font-size: 30px; font-weight: 600; line-height: 36px; }
+  .cx-info__title { font-size: 23px; line-height: 32px; margin-bottom: 36px; }
+  .cx-info { padding-bottom: 78px; }
+  .cx-info__grid { grid-template-columns: 1fr; gap: 0; }
+  .cx-card img { margin-bottom: 5px; }
+  .cx-card h6 { font-size: 13px; line-height: 19px; }
+  .cx-card p { font-size: 13px; line-height: 19px; margin-bottom: 15px; }
+  .cx-enquire { padding-bottom: 10px; }
+  .cx-enquire__grid { grid-template-columns: 1fr; gap: 30px; }
+  .cx-form__title { font-size: 23px; line-height: 32px; margin-bottom: 34px; }
+  .cx-form form p { margin-bottom: 38px; }
+}

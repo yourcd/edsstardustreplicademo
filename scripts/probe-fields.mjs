@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/120 Safari/537.36';
+const b=await chromium.launch();const ctx=await b.newContext({viewport:{width:1440,height:900},deviceScaleFactor:1,userAgent:UA});
+const p=await ctx.newPage();await p.goto('https://indiauncharted.com/contact-us/',{waitUntil:'domcontentloaded'});await p.waitForTimeout(2500);
+const d=await p.evaluate(()=>{const out=[];
+ const h2=document.querySelector('.wpcf7').closest('.column_attr').querySelector('h2');
+ const r=h2.getBoundingClientRect();out.push({t:'h2',y:Math.round(r.y),h:Math.round(r.height),mb:getComputedStyle(h2).marginBottom});
+ document.querySelectorAll('.wpcf7-form p').forEach((pp,i)=>{const rr=pp.getBoundingClientRect();const inp=pp.querySelector('input');out.push({t:'p'+i,y:Math.round(rr.y),h:Math.round(rr.height),pm:getComputedStyle(pp).margin,ih:inp?Math.round(inp.getBoundingClientRect().height):null});});
+ return out;});
+console.log(JSON.stringify(d,null,1));await b.close();

@@ -1,0 +1,13 @@
+import { chromium } from 'playwright';
+const url=process.argv[2];const UA='Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1';
+const b=await chromium.launch();const p=await(await b.newContext({viewport:{width:360,height:800},deviceScaleFactor:1,userAgent:UA,isMobile:true})).newPage();
+await p.goto(url,{waitUntil:'domcontentloaded',timeout:60000});await p.waitForTimeout(2000);
+const isLive=url.includes('indiauncharted');
+const res=await p.evaluate((isLive)=>{const out={};const g=(n,sel)=>{const el=document.querySelector(sel);if(!el){out[n]='MISS';return;}const r=el.getBoundingClientRect();out[n]={y:Math.round(r.y+scrollY),h:Math.round(r.height)};};
+ g('banner',isLive?'#Subheader':'.art-banner');
+ g('nav',isLive?'.post-nav':'.art-nav');
+ g('feat',isLive?'.single-photo-wrapper.image':'.art-featured');
+ g('related',isLive?'.section-post-related':'.art-related');
+ g('comments',isLive?'.section-post-comments':'.art-comments');
+ return out;},isLive);
+console.log(isLive?'LIVE':'PROTO',JSON.stringify(res));await b.close();

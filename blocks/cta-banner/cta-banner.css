@@ -1,0 +1,53 @@
+/* cta-banner — India Uncharted full-bleed photo CTA band. Values lifted from home.css .ctabanner*. */
+
+.section.cta-banner-container {
+  margin: 0;
+}
+
+.cta-banner-container .cta-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.cta-banner {
+  position: relative;
+  padding: 160px 0;
+  background-image: url("https://indiauncharted.com/wp-content/uploads/2026/02/btm-copy.jpg-1-1.jpeg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+}
+
+.cta-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(30 24 18 / 35%);
+}
+
+.cta-banner .cta-banner-inner {
+  position: relative;
+  z-index: 2;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.cta-banner .cta-banner-inner h2 {
+  margin: 0 0 24px;
+  font-family: var(--display-font-family);
+  font-size: 44px;
+  line-height: 1.15;
+  color: #fff;
+}
+
+.cta-banner .cta-banner-inner .button-wrapper {
+  margin: 0;
+}
+
+@media (width <= 600px) {
+  .cta-banner .cta-banner-inner h2 {
+    font-size: 30px;
+  }
+}

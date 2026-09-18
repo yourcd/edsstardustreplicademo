@@ -1,0 +1,177 @@
+/* ============================================================
+   India Uncharted — DESTINATION archetype (destination/goa/)
+   Body only: banner override + "GOA Tours" grid of tour cards.
+   Header / footer / floating chrome / tokens come from canon.css.
+   ============================================================ */
+
+/* ---- Banner: live #Subheader is 474px tall at 1440 (canon default 449) ---- */
+.dest-banner { min-height: 474px; background-color: #f5f5f5; }
+
+/* ---- Tours section ---- */
+.dest-section { padding: 60px 0; }
+/* Live .container is width:(100% - 108px) capped at 1322px — 54px gutters, no inner padding */
+.dest-container { width: calc(100% - 108px); max-width: 1322px; margin: 0 auto; }
+
+.dest-tours-title {
+  font-family: var(--font-head);
+  font-size: 40px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--brown);
+  text-align: left;
+  margin: 0 0 40px;
+}
+
+/* ---- Grid ---- */
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ---- Card ---- */
+.tour-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  background: #fff;
+  position: relative;
+  transition: all .4s ease;
+}
+.tour-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(0,0,0,0.15); }
+
+.ova_head_product { position: relative; overflow: hidden; }
+.ova-product-thumbnail { display: block; }
+.ova-product-thumbnail img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+.tour-card:hover .ova-product-thumbnail img { transform: scale(1.08); }
+
+.ova_foot_product {
+  position: relative;
+  background: #fff;
+  padding: 30px 20px 20px;
+}
+
+/* Day badge */
+.ova-tour-day {
+  position: absolute;
+  top: -22px;
+  left: 20px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 8px 16px;
+  border: 1px solid var(--coral);
+  border-radius: 50px;
+  background: #fff;
+  color: #000;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+}
+.ova-tour-day .ic-clock {
+  width: 14px; height: 14px;
+  fill: none; stroke: var(--coral); stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* Title */
+.ova-product-title {
+  margin: 0;
+  padding: 0 0 14px;
+  font-family: var(--font-head);
+  font-size: 16.65px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--brown);
+}
+.ova-product-title a { color: inherit; transition: color .3s ease; }
+.ova-product-title a:hover { color: var(--coral); }
+
+/* Location */
+.ova-product-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 3px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  padding-bottom: 3px;
+  color: #777;
+}
+.ova-product-location .location {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 13px;
+  line-height: 19px;
+}
+.ova-product-location .ic-pin {
+  width: 16px; height: 16px;
+  fill: #3F2F1C;
+  flex: none;
+}
+
+/* Rating */
+.star-rating {
+  display: inline-block;
+  font-size: 22.5px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+.star-rating span { color: #FFC83E; }
+
+/* Price row */
+.ova-product-wrapper-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 1;
+  padding-top: 28px;
+}
+.ova-product-price .amount {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ink);
+}
+.product-btn-book-now {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: var(--coral);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: background .3s ease;
+}
+.product-btn-book-now:hover { background: var(--coral-dk); }
+
+/* ---- Responsive (live: 991 → 2 cols, 767 → 1 col) ---- */
+@media (max-width: 991px) {
+  .tour-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .tour-grid { grid-template-columns: 1fr; }
+  .ova-product-thumbnail img { height: 240px; }
+}
+@media (max-width: 600px) {
+  /* live: 60px static header + 196px banner → GOA Tours lands at y316 */
+  .dest-banner { min-height: 256px; }
+  .dest-container { width: 100%; max-width: 700px; padding: 0 33px; }
+  .dest-tours-title { font-size: 24px; line-height: 33px; margin: 0 0 40px; }
+  /* live scales card typography down responsively on mobile */
+  .ova-product-title { font-size: 14.43px; }
+  .star-rating { font-size: 19.5px; }
+  .ova-product-review-and-price { line-height: 24px; }
+  .ova-product-price .amount { font-size: 13px; }
+}

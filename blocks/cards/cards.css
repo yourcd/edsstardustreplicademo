@@ -1,27 +1,147 @@
+/* cards — India Uncharted (variant-driven). Base = package-style info card. */
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
   background-color: var(--background-color);
-}
-
-.cards .cards-card-body {
-  margin: 16px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .cards .cards-card-image {
   line-height: 0;
+  position: relative;
 }
 
-.cards > ul > li img {
+.cards .cards-card-image img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
+}
+
+.cards .cards-card-body { padding: 18px 20px 22px; }
+
+.cards .cards-card-body h3,
+.cards .cards-card-body h4 {
+  font-family: var(--heading-font-family);
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--brown);
+  margin: 0 0 6px;
+}
+
+.cards .cards-card-body p {
+  font-size: 13px;
+  color: var(--brown-lt);
+  margin: 0 0 14px;
+}
+
+.cards .cards-card-body p:last-child { margin-bottom: 0; }
+
+@media (width <= 991px) {
+  .cards > ul { grid-template-columns: 1fr 1fr; }
+}
+
+@media (width <= 600px) {
+  .cards > ul { grid-template-columns: 1fr; }
+}
+
+/* ---------- variant: blogs (3-up, taller media) ---------- */
+.cards.blogs .cards-card-image img {
+  aspect-ratio: 4 / 3;
+  height: 317px;
+}
+
+.cards.blogs .cards-card-body h2 {
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--brown);
+  margin: 0 0 16px;
+}
+
+.cards.blogs .cards-card-body a {
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--coral);
+}
+
+/* ---------- variant: destinations / themes / tiles (label-overlay tiles) ---------- */
+.cards.destinations > ul,
+.cards.themes > ul,
+.cards.tiles > ul { gap: 20px; }
+
+.cards.themes > ul { grid-template-columns: repeat(4, 1fr); }
+
+.cards.destinations > ul > li,
+.cards.themes > ul > li,
+.cards.tiles > ul > li {
+  position: relative;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: none;
+}
+
+.cards.destinations .cards-card-image img,
+.cards.themes .cards-card-image img,
+.cards.tiles .cards-card-image img {
+  aspect-ratio: 4 / 3;
+  height: 100%;
+}
+
+.cards.themes .cards-card-image img {
+  aspect-ratio: 3 / 4;
+  height: 360px;
+}
+
+.cards.destinations .cards-card-body,
+.cards.themes .cards-card-body,
+.cards.tiles .cards-card-body {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 16px 18px;
+  background: linear-gradient(to top, rgb(0 0 0 / 55%), transparent);
+  z-index: 2;
+}
+
+.cards.destinations .cards-card-body h3,
+.cards.themes .cards-card-body h3,
+.cards.tiles .cards-card-body h3 {
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.cards.themes .cards-card-body {
+  background: linear-gradient(to top, rgb(0 0 0 / 50%), transparent 60%);
+}
+
+.cards.themes .cards-card-body h3 {
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (width <= 991px) {
+  .cards.themes > ul { grid-template-columns: 1fr 1fr; }
+}
+
+@media (width <= 600px) {
+  .cards.themes > ul,
+  .cards.destinations > ul,
+  .cards.tiles > ul { grid-template-columns: 1fr; }
 }

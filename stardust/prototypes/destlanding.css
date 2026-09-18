@@ -1,0 +1,213 @@
+/* ============================================================
+   India Uncharted — DESTINATION LANDING archetype (destlanding)
+   Page body only. Header / banner / footer / chrome are canon.
+   Live ref: https://indiauncharted.com/agra-tour-packages/
+   ============================================================ */
+
+/* Page-local banner override: live #Subheader is 474px tall at desktop
+   (canon .iu-pagebanner is min-height:449px). Match live exactly. */
+@media (min-width: 601px) {
+  main#Content > .iu-pagebanner { min-height: 474px; }
+}
+
+/* ---------------- INTRO (two-column: copy + image) ---------------- */
+.dl-intro { padding: 40px 0 0; }
+.dl-intro__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
+  align-items: start;
+  padding-bottom: 40px;
+}
+.dl-intro__copy h2 {
+  font-family: var(--font-head);
+  font-size: 39px;
+  line-height: 54px;
+  font-weight: 500;
+  color: var(--brown);
+  margin: 0 0 15px;
+}
+.dl-intro__copy h4 {
+  font-family: var(--font-head);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: var(--coral);
+  margin: 0 0 15px;
+}
+.dl-intro__copy p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 32px;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 15px;
+}
+.dl-intro__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------------- POPULAR TOUR PACKAGES ---------------- */
+.dl-popular { padding: 40px 0 100px; }
+.dl-popular__title {
+  font-family: var(--font-head);
+  font-size: 39px;
+  line-height: 54px;
+  font-weight: 500;
+  color: var(--brown);
+  text-align: center;
+  margin: 0 0 15px;
+}
+.dl-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 45px;
+}
+
+.dl-card {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+.dl-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(0,0,0,0.15); }
+
+.dl-card__thumb { display: block; overflow: hidden; }
+.dl-card__thumb img {
+  width: 100%;
+  height: 276px;
+  object-fit: cover;
+  display: block;
+  transition: transform .9s ease-out;
+}
+.dl-card:hover .dl-card__thumb img { transform: scale(1.08); }
+
+.dl-card__body {
+  position: relative;
+  background: #fff;
+  padding: 30px 20px 20px;
+}
+
+.dl-card__badge {
+  position: absolute;
+  top: -22px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #fff;
+  color: #000;
+  border: 1px solid var(--coral);
+  border-radius: 50px;
+  padding: 8px 16px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+.dl-card__badge svg { color: var(--coral); flex: none; }
+
+.dl-card__title {
+  font-family: var(--font-head);
+  font-size: 16.65px;
+  line-height: 1.5;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 0 14px;
+}
+.dl-card__title a { color: #111; }
+.dl-card:hover .dl-card__title a { color: var(--coral); transition: color .3s ease; }
+
+.dl-card__loc {
+  display: flex;
+  align-items: flex-start;
+  gap: 3px;
+  color: #777;
+  font-size: 15px;
+  line-height: 1.2;
+  padding: 0 0 3px;
+  margin: 0 0 20px;
+}
+.dl-card__loc svg { color: #3F2F1C; flex: none; margin-top: 1px; }
+.dl-card__loc span { font-size: 13px; }
+
+.dl-card__rating {
+  font-size: 22.5px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #FFC83E;
+  height: 22.5px;
+  margin-bottom: 11px;
+}
+
+.dl-card__price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 28px;
+}
+.dl-card__price {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--coral);
+}
+.dl-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--coral);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 4px 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: all .3s ease;
+}
+.dl-card__btn:hover { background: var(--coral-dk); }
+
+/* ---------------- responsive ---------------- */
+@media (max-width: 991px) {
+  .dl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .dl-intro__inner { grid-template-columns: 1fr; row-gap: 15px; }
+  .dl-grid { grid-template-columns: 1fr; }
+  .dl-card__thumb img { height: 226px; }
+}
+@media (max-width: 600px) {
+  /* Canon header is position:fixed at all widths; the LIVE mobile header is
+     a 60px in-flow (relative) bar that pushes content down. Page-local offset
+     mirrors live's flow so the body aligns. (Noted as a canon issue.) */
+  main.iu-main { margin-top: 60px; }
+
+  /* Live mobile banner: padding 80px 0, no min-height (≈196px tall) */
+  main#Content > .iu-pagebanner { min-height: 0; padding: 80px 0; }
+  .iu-pagebanner__title { font-size: 30px; line-height: 36px; }
+
+  /* Live mobile content gutter: 33px (section wrapper ≈294px at 360) */
+  .dl-intro .iu-container,
+  .dl-popular .iu-container { padding: 0 33px; }
+
+  .dl-intro { padding: 40px 0 0; }
+  .dl-intro__inner { padding-bottom: 40px; }
+  .dl-intro__copy h2 { font-size: 23px; line-height: 32px; }
+  .dl-intro__copy h4 { font-size: 14px; line-height: 19px; }
+  .dl-intro__copy p { font-size: 13px; line-height: 19px; }
+
+  .dl-popular { padding: 65px 0 60px; }
+  .dl-popular__title { font-size: 23px; line-height: 32px; }
+  .dl-grid { margin-top: 45px; }
+  .dl-card__title { font-size: 14.43px; line-height: 1.5; }
+}

@@ -1,0 +1,53 @@
+/* testimonial — India Uncharted quote card on a photo band. Values lifted from home.css .testi*. */
+
+.section.testimonial-container {
+  margin: 0;
+  padding: 112px 0;
+  background-image: url("https://indiauncharted.com/wp-content/uploads/2026/02/testimonial-background-home-1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.testimonial .testimonial-card {
+  position: relative;
+  max-width: 744px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 16px;
+  background: var(--background-color);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.testimonial .testimonial-quote {
+  font-family: var(--display-font-family);
+  font-size: 60px;
+  line-height: 0.5;
+  color: var(--brown-xlt);
+}
+
+.testimonial .testimonial-card h3 {
+  margin: 10px 0 14px;
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  color: var(--brown);
+}
+
+.testimonial .testimonial-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--text-color);
+}
+
+.testimonial .testimonial-card p.testimonial-stars {
+  margin: 14px 0 8px;
+  font-size: 18px;
+  color: #f0a500;
+}
+
+.testimonial .testimonial-card p.testimonial-author {
+  font-family: var(--heading-font-family);
+  font-size: 15px;
+  color: var(--coral);
+}
